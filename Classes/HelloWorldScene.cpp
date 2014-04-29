@@ -46,7 +46,7 @@ bool HelloWorld::init()
 
 	CCMenuItemImage *pLoginButton = CCMenuItemImage::create(
 											"test/bt_orange.png",
-											"CloseSelected.png",
+											"test/bt_orange_selected.png",
 											this,
 											menu_selector(HelloWorld::menuLoginCallback));
 
@@ -102,5 +102,6 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 }
 
 void HelloWorld::menuLoginCallback(CCObject * pSender) {
-
+	
 }
+

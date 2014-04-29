@@ -18,6 +18,12 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\ODSocket.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkCommunication.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -27,6 +33,12 @@
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ODSocket.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkCommunication.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

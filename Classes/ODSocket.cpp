@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ODSocket.h"
 #include <stdio.h>
 #include <iostream>
