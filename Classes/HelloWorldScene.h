@@ -17,8 +17,8 @@ public:
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
 	void menuLoginCallback(CCObject* pSender);
-	void HelloWorld::onHttpRequestCompleted(CCNode*node,void *data);
-	void HelloWorld::onResponse(char * response);
+	void onHttpRequestCompleted(CCNode*node,void *data);
+	void onResponse(char * response);
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);

@@ -1,5 +1,5 @@
 #pragma once
-#include <pthread\pthread.h>
+#include <pthread.h>
 #include "cocoa\CCArray.h"
 #include "ExtensionMacros.h"
 #include "ODSocket.h"

@@ -1,7 +1,7 @@
 #include "NetworkCommunication.h"
 #include "cocos2d.h"
 
-#include <pthread\pthread.h>
+#include <pthread.h>
 
 NS_CC_EXT_BEGIN
 
@@ -42,11 +42,10 @@ static void* networkReadThreadWork(void *data) {
 
 		if (ret > 0) {
 			recvBuffer[ret] = '\0';
-			CCLog(recvBuffer);
 
 			pthread_mutex_lock(&s_responseQueueMutex);
 			char * tmp = new char[1024];
-			strcpy_s(tmp, 1024, recvBuffer);
+			strcpy(tmp, recvBuffer);
 			response = tmp;
 			pthread_mutex_unlock(&s_responseQueueMutex);
 		} else {
@@ -66,7 +65,6 @@ static void* networkWriteThreadWork(void *data) {
 		pthread_mutex_lock(&s_requestQueueMutex);
 		if (0 != s_requestQueue->count()) {
 			request = dynamic_cast<std::string *> (s_requestQueue->objectAtIndex(0));
-			CCLog(request->c_str());
 		}
 		pthread_mutex_unlock(&s_requestQueueMutex);
 
