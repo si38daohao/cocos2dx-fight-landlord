@@ -1,4 +1,6 @@
 #include "HelloWorldScene.h"
+#include "NetworkCommunication.h"
+#include "CocoStudio\Json\rapidjson\writer.h"
 
 USING_NS_CC;
 
@@ -84,6 +86,8 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
+
+	extension::NetworkCommunication::getInstance()->setResponseCallback(this, httpresponse2_selector(HelloWorld::onResponse));
     
     return true;
 }
@@ -102,6 +106,19 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 }
 
 void HelloWorld::menuLoginCallback(CCObject * pSender) {
+	extension::NetworkCommunication::getInstance()->connect("172.20.133.41", 4000);
+}
+
+void HelloWorld::onResponse(char * response) {
+	CCLog("Jonathan: in HelloWorld::onResponse. response = %s", response);
 	
+	if (response != NULL) {
+		CCLabelTTF* pLabel = CCLabelTTF::create(response, "Arial", 16);
+    
+		// position the label on the center of the screen
+		pLabel->setPosition(ccp(200, 200));
+
+		this->addChild(pLabel, 2);
+	}
 }
 

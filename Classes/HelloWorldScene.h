@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 
+
 class HelloWorld : public cocos2d::CCLayer
 {
 public:
@@ -17,6 +18,7 @@ public:
     void menuCloseCallback(CCObject* pSender);
 	void menuLoginCallback(CCObject* pSender);
 	void HelloWorld::onHttpRequestCompleted(CCNode*node,void *data);
+	void HelloWorld::onResponse(char * response);
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
