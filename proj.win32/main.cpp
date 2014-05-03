@@ -1,7 +1,6 @@
 #include "main.h"
 #include "AppDelegate.h"
 #include "CCEGLView.h"
-#include "NetworkCommunication.h"
 
 USING_NS_CC;
 
@@ -26,8 +25,6 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     CCEGLView* eglView = CCEGLView::sharedOpenGLView();
     eglView->setViewName("Example");
     eglView->setFrameSize(800, 480);
-
-	extension::NetworkCommunication::getInstance();
 
     return CCApplication::sharedApplication()->run();
 }
