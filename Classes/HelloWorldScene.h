@@ -16,9 +16,12 @@ public:
     
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
-	void menuLoginCallback(CCObject* pSender);
+	void menuConnectCallback(CCObject* pSender);
+	void menuRenameCallback(CCObject * pSender);
+	void menuGetInfoCallback(CCObject * pSender)
 	void onHttpRequestCompleted(CCNode*node,void *data);
 	void onResponse(char * response);
+	void onConnectResult(int resultCode, char * desc);
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);

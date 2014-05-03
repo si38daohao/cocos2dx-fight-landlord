@@ -6,8 +6,11 @@
 
 NS_CC_EXT_BEGIN
 
-typedef void (CCObject::*SEL_HttpResponse_Jonathan)(char * response);
-#define httpresponse2_selector(_SELECTOR) (cocos2d::extension::SEL_HttpResponse_Jonathan)(&_SELECTOR)
+typedef void (CCObject::*SEL_SocketResponse)(char * response);
+#define httpresponse2_selector(_SELECTOR) (cocos2d::extension::SEL_SocketResponse)(&_SELECTOR)
+
+typedef void (CCObject::*SEL_ConnectResult)(int resultCode, char * desc);
+#define connectresult_selector(_SELECTOR) (cocos2d::extension::SEL_ConnectResult)(&_SELECTOR)
 
 class NetworkCommunication : public CCObject
 {
@@ -17,7 +20,10 @@ public:
 	void disconnect();
 	void addRequest(char * request);
 	void dispatchResponseCallbacks(float delta);
-	void setResponseCallback(CCObject* pTarget, SEL_HttpResponse_Jonathan pSelector);
+	void setResponseCallback(CCObject* pTarget, SEL_SocketResponse pSelector);
+	void setConnectResultCallback(CCObject * pTarget, SEL_ConnectResult pSelector);
+
+	void send(char* buffer, int size);
 private:
 	NetworkCommunication(void);
 	~NetworkCommunication(void);
