@@ -190,7 +190,7 @@ void NetworkCommunication::setConnectResultCallback(CCObject* pTarget, SEL_Conne
 	s_connectResultSelector = pSelector;
 }
 
-void NetworkCommunication::send(char* buffer, int size) {
+void NetworkCommunication::send(const char* buffer, int size) {
 	SocketRequest* socketRequest = new SocketRequest(buffer, size);
 	pthread_mutex_lock(&s_requestQueueMutex);
 	s_requestQueue->addObject(socketRequest);

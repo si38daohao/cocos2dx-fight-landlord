@@ -8,9 +8,18 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
+				   ../../Classes/Card.cpp \
                    ../../Classes/HelloWorldScene.cpp \
+				   ../../Classes/MiddleCard.cpp \
+				   ../../Classes/MyPlayerInfo.cpp \
+				   ../../Classes/NetworkCommunication.cpp \
                    ../../Classes/ODSocket.cpp \
-                   ../../Classes/NetworkCommunication.cpp
+				   ../../Classes/PlayerInfo.cpp \
+				   ../../Classes/PlayerInfoScene.cpp \
+				   ../../Classes/RoomScene.cpp \
+				   ../../Classes/SmallCard.cpp \
+				   ../../Classes/SocketRequest.cpp \
+				   ../../Classes/SocketResponse.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

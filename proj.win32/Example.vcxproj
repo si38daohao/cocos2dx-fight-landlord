@@ -69,7 +69,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\cocos2dx;$(ProjectDir)..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\..\..\external;$(ProjectDir)..\..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\..\CocosDenshion\include;$(ProjectDir)..\..\..\extensions;..\Classes;..;E:\cocos2d-x-2.2.3\cocos2dx\platform\third_party\win32\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\cocos2dx;$(ProjectDir)..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\..\..\external;$(ProjectDir)..\..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\..\CocosDenshion\include;$(ProjectDir)..\..\..\extensions;..\Classes;..;E:\cocos2d-x-2.2.3\cocos2dx\platform\third_party\win32\pthread;E:\cocos2d-x-2.2.3\projects\Example\proj.win32\Debug.win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;USE_WIN32_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -132,17 +132,36 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\Card.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\MiddleCard.cpp" />
+    <ClCompile Include="..\Classes\MyPlayerInfo.cpp" />
+    <ClCompile Include="..\Classes\NetworkCommunication.cpp" />
     <ClCompile Include="..\Classes\ODSocket.cpp" />
+    <ClCompile Include="..\Classes\PlayerInfo.cpp" />
+    <ClCompile Include="..\Classes\PlayerInfoScene.cpp" />
+    <ClCompile Include="..\Classes\RoomScene.cpp" />
+    <ClCompile Include="..\Classes\SmallCard.cpp" />
+    <ClCompile Include="..\Classes\SocketRequest.cpp" />
+    <ClCompile Include="..\Classes\SocketResponse.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="NetworkCommunication.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\Card.h" />
+    <ClInclude Include="..\Classes\CommandCodeDef.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\MiddleCard.h" />
+    <ClInclude Include="..\Classes\MyPlayerInfo.h" />
+    <ClInclude Include="..\Classes\NetworkCommunication.h" />
     <ClInclude Include="..\Classes\ODSocket.h" />
+    <ClInclude Include="..\Classes\PlayerInfo.h" />
+    <ClInclude Include="..\Classes\PlayerInfoScene.h" />
+    <ClInclude Include="..\Classes\RoomScene.h" />
+    <ClInclude Include="..\Classes\SmallCard.h" />
+    <ClInclude Include="..\Classes\SocketRequest.h" />
+    <ClInclude Include="..\Classes\SocketResponse.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="NetworkCommunication.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\cocos2dx\proj.win32\cocos2d.vcxproj">

@@ -2,7 +2,7 @@
 
 NS_CC_EXT_BEGIN
 
-SocketRequest::SocketRequest(char * buffer, int size)
+SocketRequest::SocketRequest(const char * buffer, int size)
 {
 	this->pBuffer = buffer;
 	this->size = size;

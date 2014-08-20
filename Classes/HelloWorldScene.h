@@ -4,6 +4,10 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 
+USING_NS_CC;
+USING_NS_CC_EXT;
+using namespace ui;
+
 
 class HelloWorld : public cocos2d::CCLayer
 {
@@ -18,13 +22,20 @@ public:
     void menuCloseCallback(CCObject* pSender);
 	void menuConnectCallback(CCObject* pSender);
 	void menuRenameCallback(CCObject * pSender);
-	void menuGetInfoCallback(CCObject * pSender)
-	void onHttpRequestCompleted(CCNode*node,void *data);
+	void menuGetInfoCallback(CCObject * pSender);
+	void onHttpRequestCompleted(CCNode* node, void *data);
 	void onResponse(char * response);
 	void onConnectResult(int resultCode, char * desc);
+	void settingTouchEvent(CCObject *pSender, TouchEventType type);
+	void firstChargeTouchEvent(CCObject *pSender, TouchEventType type);
+	void chargeTouchEvent(CCObject *pSender, TouchEventType type);
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
+
+private:
+	Label * userNameLabel;
+	Label * userCoinAmountLabel;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

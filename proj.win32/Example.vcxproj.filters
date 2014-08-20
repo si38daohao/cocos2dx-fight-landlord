@@ -21,7 +21,34 @@
     <ClCompile Include="..\Classes\ODSocket.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkCommunication.cpp">
+    <ClCompile Include="..\Classes\NetworkCommunication.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SocketRequest.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SocketResponse.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\RoomScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerInfo.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MyPlayerInfo.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerInfoScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MiddleCard.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SmallCard.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +65,37 @@
     <ClInclude Include="..\Classes\ODSocket.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="NetworkCommunication.h">
+    <ClInclude Include="..\Classes\NetworkCommunication.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SocketRequest.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SocketResponse.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\RoomScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerInfo.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MyPlayerInfo.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CommandCodeDef.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerInfoScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MiddleCard.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SmallCard.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

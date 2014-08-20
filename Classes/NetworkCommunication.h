@@ -23,7 +23,7 @@ public:
 	void setResponseCallback(CCObject* pTarget, SEL_SocketResponse pSelector);
 	void setConnectResultCallback(CCObject * pTarget, SEL_ConnectResult pSelector);
 
-	void send(char* buffer, int size);
+	void send(const char* buffer, int size);
 private:
 	NetworkCommunication(void);
 	~NetworkCommunication(void);
