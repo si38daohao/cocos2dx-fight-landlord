@@ -438,7 +438,7 @@ void RoomScene::onResponse(char * response) {
 				kittyCardPanel->addChild(card);
 			}
 
-			// Òş²ØÍæ¼Ò·ÖÊı£¬ÏÔÊ¾Ê£ÓàÅÆÊıÁ¿
+			// éšè—ç©å®¶åˆ†æ•°ï¼Œæ˜¾ç¤ºå‰©ä½™ç‰Œæ•°é‡
 			for (int i = 0; i < mPlayerInfoArray->size(); i++) {
 				if ((*mPlayerCoinPanelArray)[i] != NULL) {
 					(*mPlayerCoinPanelArray)[i]->setVisible(false);
@@ -509,7 +509,7 @@ void RoomScene::onResponse(char * response) {
 			bool response = doc["response"].GetBool();
 			int currentScore = doc["current_multiple"].GetInt();
 
-			// score¼Ó±¶
+			// scoreåŠ å€
 			if (response) {
 				char * scoreString = new char[8];
 				sprintf(scoreString, "%d", currentScore);
@@ -543,7 +543,7 @@ void RoomScene::onResponse(char * response) {
 				}
 			}
 
-			//·­¿ªµ×ÅÆ
+			//ç¿»å¼€åº•ç‰Œ
 			CCObject* kittyCard;
 			CCARRAY_FOREACH(kittyCardPanel->getChildren(), kittyCard) {
 				((SmallCard*)kittyCard)->flip();
@@ -617,7 +617,7 @@ void RoomScene::onResponse(char * response) {
 				this->mLayCardButtonPanel->setEnabled(true);
 				(*mPlayerLaidCardPanelArray)[1]->removeAllChildren();
 
-				// ÄÖÖÓÏÔÊ¾
+				// é—¹é’Ÿæ˜¾ç¤º
 				(*mPlayerClockImageViewArray)[1]->setVisible(true);
 			}
 			break;
@@ -658,7 +658,7 @@ void RoomScene::onResponse(char * response) {
 
 					for(int i = 0;i < mPlayerInfoArray->size(); i++) {
 						if (strcmp(layCardPlayerId, (*mPlayerInfoArray)[i]->getId()) == 0) {
-							// Òş²ØÄÖÖÓ
+							// éšè—é—¹é’Ÿ
 							(*mPlayerClockImageViewArray)[i]->setVisible(false);
 
 							(*mPlayerLaidCardPanelArray)[i]->removeAllChildren();
@@ -668,7 +668,7 @@ void RoomScene::onResponse(char * response) {
 								(*mPlayerLaidCardPanelArray)[i]->addChild(smallCardArray[j]);
 							}
 
-							// ¸üĞÂÊ£ÓàÅÆÊıĞÅÏ¢
+							// æ›´æ–°å‰©ä½™ç‰Œæ•°ä¿¡æ¯
 							char * leftCardCountString = new char[8];
 							int leftCardCount = doc["left_card_count"].GetInt();
 							sprintf(leftCardCountString, "%d", leftCardCount);
@@ -681,10 +681,10 @@ void RoomScene::onResponse(char * response) {
 						}
 					}
 				} else {
-					//²»³öÅÆµÄÇéĞÎ
+					//ä¸å‡ºç‰Œçš„æƒ…å½¢
 					for(int i = 0;i < mPlayerInfoArray->size(); i++) {
 						if (strcmp(layCardPlayerId, (*mPlayerInfoArray)[i]->getId()) == 0) {
-							// Òş²ØÄÖÖÓ
+							// éšè—é—¹é’Ÿ
 							(*mPlayerClockImageViewArray)[i]->setVisible(false);
 							(*mPlayerActionImageViewArray)[i]->setVisible(true);
 							(*mPlayerActionImageViewArray)[i]->loadTexture("1280_800_wdj/room/player_pass.png");
@@ -694,7 +694,7 @@ void RoomScene::onResponse(char * response) {
 
 				const char* nextLayCardPlayerId = doc["next_to_hand_out_card_player_id"].GetString();
 
-				// ÏÂÒ»¸ö³öÅÆÍæ¼ÒµÄÄÖÖÓÏÔÊ¾³öÀ´
+				// ä¸‹ä¸€ä¸ªå‡ºç‰Œç©å®¶çš„é—¹é’Ÿæ˜¾ç¤ºå‡ºæ¥
 				for (int i = 0; i < mPlayerInfoArray->size(); i++) {
 					if (strcmp(nextLayCardPlayerId, (*mPlayerInfoArray)[i]->getId()) == 0) {
 						(*mPlayerClockImageViewArray)[i]->setVisible(true);
@@ -707,14 +707,14 @@ void RoomScene::onResponse(char * response) {
 					(*mPlayerLaidCardPanelArray)[1]->removeAllChildren();
 				}
 
-				// ¸üĞÂ±¶ÊıĞÅÏ¢
+				// æ›´æ–°å€æ•°ä¿¡æ¯
 				int score = doc["current_multiple"].GetInt();
 				char * scoreString= new char[8];
 				sprintf(scoreString, "%d", score);
 				mScoreLabel->setText(scoreString);
 				delete(scoreString);
 			} else {
-				// ´ò³öÈ¥µÄÅÆÊÕ»ØÀ´
+				// æ‰“å‡ºå»çš„ç‰Œæ”¶å›æ¥
 				CCArray* children = this->myCardsPanel->getChildren();
 				for (int i = 0; i < laidCardArray.Size(); i++) {
 					mHandCardArray->push_back(laidCardArray[i].GetInt());
